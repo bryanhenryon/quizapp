@@ -1,0 +1,16 @@
+$screen-sm-min: 580px;
+$screen-md-min: 900px;
+
+@mixin breakpoint($media) {
+  @if $media == $screen-sm-min {
+    @media (min-width: $screen-sm-min) {
+      @content;
+    }
+  }
+
+  @if $media == $screen-md-min {
+    @media (min-width: $screen-md-min) {
+      @content;
+    }
+  }
+}
